@@ -31,15 +31,22 @@ describe Oystercard do
 
   describe "#touch_in" do
     it "change in_journey from false to true" do
+      subject.top_up(1)
       subject.touch_in
       expect(subject).to be_in_journey
       # expect{subject.touch_in}.to change{subject.in_journey?}.to(true)
+    end
+
+    it "rejects journey if current balance is less than minimum fare" do
+      minimum_balance = Oystercard::MINIMUM_BALANCE
+      expect{subject.touch_in}.to raise_error("Minimum balance is £#{minimum_balance}")
     end
   end
 
   describe "#touch_out" do
     it "change journey from true to false" do
-      subject.touch_in    
+      subject.top_up(1)
+      subject.touch_in
       subject.touch_out
       expect(subject).not_to be_in_journey
     end
