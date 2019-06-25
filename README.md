@@ -1,18 +1,21 @@
 <h1> Oystercard Challenge </h1>
 
+<h2> Overview </h2>
+
 This is our 2nd week pair programming challenege at Makers Academy which focusses on the main goals of; 
 
 - I write code that is easy to change
 - I can test drive my code 
 - I can build with objects 
 
+This project has no user interface/html and is run purely in the command line, this programme was written using Ruby. 
 
 
 <h2>User Stories</h2>
 
-In order to use public transport
+UIn order to use public transport
 As a customer
-I want money on my card
+I want money on my card. 
 
 In order to keep using public transport
 As a customer
@@ -58,3 +61,13 @@ In order to be charged the correct amount
 As a customer
 I need to have the correct fare calculated
 
+<h2> How to run </h2> 
+
+- Clone this repo https://github.com/HottScall/oystercard-challenge.git
+- Open command line 
+- cd oystercard-challenge
+- type irb
+- require './lib/oystercard'
+  > true 
+- Set a variable equal to Oystercard.new e.g O = Oystercard.new
+- Use keywords such as top_up, deduct, touch_in(station), touch_out(station)
