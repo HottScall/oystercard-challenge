@@ -13,7 +13,7 @@ This project has no user interface/html and is run purely in the command line, t
 
 <h2>User Stories</h2>
 
-UIn order to use public transport
+In order to use public transport
 As a customer
 I want money on my card. 
 
